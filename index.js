@@ -37,7 +37,7 @@ Style.prototype = {
 
 
   /**
-   * Append css to a new or to the exsisting style tag.
+   * Append new css to the style element or refresh its content. 
    * @param {string}
    */
   load: function() {
@@ -53,7 +53,7 @@ Style.prototype = {
 
 
   /**
-   * Clear the style tag's content as well as the rules stored.
+   * Clear the style and varialbes.
    */
   clear: function() {
     _setStyleContent(this.elem, '');
@@ -99,6 +99,7 @@ function _getRules(args) {
 }
 
 
+// Create new stylesheet.
 function _createStyleElem() {
   var elem = document.createElement('style')
     , head = document.getElementsByTagName('head')[0];
@@ -107,7 +108,7 @@ function _createStyleElem() {
 }
 
 
-// Replace all the variables with the defined values in the map.
+// Substitute variables in the string with defined map. 
 function _substitute(str, map) {    
   for (var name in map) {
     if (map.hasOwnProperty(name)) {
@@ -118,7 +119,7 @@ function _substitute(str, map) {
 }
 
 
-// Set the content of a style element.
+// Set the content which string.
 function _setStyleContent(el, content) {
   if (el && el.tagName.toLowerCase() === 'style') {
     el.styleSheet 
@@ -127,10 +128,11 @@ function _setStyleContent(el, content) {
   }
 }
 
-//Refresh the style tag's content with the rules and defined variables.
+
+// Refresh the content with the rules and defined variables.
 function _refreshStyleContent(elem, rules, map) {
   _setStyleContent(elem, 
     _substitute(rules, map)
   );
-};
+}
 
