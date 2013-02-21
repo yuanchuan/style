@@ -4,11 +4,6 @@
   "description": "Create stylesheets dynamically in javascript",
   "version": "0.1.0",
   "license": "MIT",
-  "keywords": [
-    "css", 
-    "stylesheet"
-  ],
-  "scripts: [
-    "index.js"
-  ]
+  "keywords": ["css", "stylesheet"],
+  "scripts": ["index.js"]
 }
