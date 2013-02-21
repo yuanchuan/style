@@ -60,7 +60,7 @@ Re-defining a variable then apply:
 ```Javascript
 style
   .define({
-    color1: 'blue'
+    color1: 'blue',
     color2: 'red'
   })
   .load(); 
