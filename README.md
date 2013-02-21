@@ -1,5 +1,5 @@
 # Style
-Create stylesheets dynamically in JavaScript. Ported from [excss](https://github.com/yuanchuan/excss)
+Create stylesheets dynamically in JavaScript. Ported from [excss](https://github.com/yuanchuan/excss).
 
 ### Installation
 
@@ -12,7 +12,7 @@ component install yuanchuan/style
 
 ```Javascript
 var Style = require('style');
-var style = new Style;
+var style = new Style();
 
 style.load(
   'body { background:blue; }',
@@ -23,7 +23,7 @@ style.load(
 Defining variables:
 
 ```Javascript
-var style = new Style;
+var style = new Style();
 
 style.define({
   color1: '#23efab',
@@ -40,18 +40,20 @@ style.load(
 
 Using add() to append new styles and refresh later using load():
 
-    style
-      .define({
-        color1: '#23efab',
-        color2: '#ff3233'
-      })
-      .add(
-        'img { border: 1px @color1 solid }'
-      )
-      .add('
-        a: hover{ border: 1px @color2 dashed }'
-      )
-      .load();
+```Javascript
+style
+  .define({
+    color1: '#23efab',
+    color2: '#ff3233'
+  })
+  .add(
+    'img { border: 1px @color1 solid }'
+  )
+  .add('
+    a: hover{ border: 1px @color2 dashed }'
+  )
+  .load();
+```
 
 Re-defining a variable then apply:
 
@@ -59,6 +61,7 @@ Re-defining a variable then apply:
 style
   .define({
     color1: 'blue'
+    color2: 'red'
   })
   .load(); 
 ```
@@ -77,4 +80,4 @@ style.remove();
 
 ### License
 
-The MIT license
+The MIT license.
