@@ -1,0 +1,14 @@
+{
+  "name": "style",
+  "repo": "yuanchuan/style",
+  "description": "Create stylesheets dynamically in javascript",
+  "version": "0.1.0",
+  "license": "MIT",
+  "keywords": [
+    "css", 
+    "stylesheet"
+  ],
+  "scriptss: [
+    "index.js"
+  ]
+}
