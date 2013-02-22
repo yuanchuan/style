@@ -23,17 +23,17 @@ style.load(
 Defining variables:
 
 ```Javascript
-var style = new Style();
+var style = new Style()
 
 style.define({
   color1: '#23efab',
   color2: '#ff3233' 
-});
+})
 
 style.load(
   'img { border: 1px @color1 solid }',
   'a:hover { border: 1px @color2 dashed }'
-);
+)
 ```
 
 ### More examples
@@ -49,10 +49,10 @@ style
   .add(
     'img { border: 1px @color1 solid }'
   )
-  .add('
+  .add(
     a: hover{ border: 1px @color2 dashed }'
   )
-  .load();
+  .load()
 ```
 
 Re-defining a variable then apply:
@@ -63,19 +63,19 @@ style
     color1: 'blue',
     color2: 'red'
   })
-  .load(); 
+  .load() 
 ```
 
 Clear all the added styles:
 
 ```Javascript
-style.clear();
+style.clear()
 ```
 
 Remove completely:
 
 ```Javascript
-style.remove();
+style.remove()
 ```
 
 ### License

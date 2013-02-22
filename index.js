@@ -1,11 +1,17 @@
-/**
- * Style -  Create stylesheets dynamically in JavaScript.
- * https://github.com/yuanchuan/style
- */
 
-var Style = module.exports = function(map) {
+/**
+ * Expose.
+ */
+module.exports = Style;
+
+
+/**
+ * Create an instance of Style
+ * @param {Object} pre-defined variables
+ */
+function Style(map) {
   if (!(this instanceof Style)) {
-    return new Style();
+    return new Style(map);
   }
   this.map = _mixin({}, map);
   this.rules = '';
@@ -26,7 +32,7 @@ Style.prototype = {
  
    
   /**
-   * Add new css but won't refresh the style tag's content.
+   * Add new css but won't refresh the style element's content.
    * @param {string} Accepts multiple params
    */
   add: function() {
@@ -64,7 +70,7 @@ Style.prototype = {
 
 
   /**
-   * Removes the style tag completely.
+   * Remove the style element completely.
    */
   remove: function() {    
     var elem = this.elem;
@@ -119,7 +125,7 @@ function _substitute(str, map) {
 }
 
 
-// Set the content which string.
+// Set the style element's content.
 function _setStyleContent(el, content) {
   if (el && el.tagName.toLowerCase() === 'style') {
     el.styleSheet 
