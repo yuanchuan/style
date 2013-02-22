@@ -50,7 +50,7 @@ style
     'img { border: 1px @color1 solid }'
   )
   .add(
-    a: hover{ border: 1px @color2 dashed }'
+    'a: hover{ border: 1px @color2 dashed }'
   )
   .load()
 ```
