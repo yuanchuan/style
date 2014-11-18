@@ -2,7 +2,7 @@
   "name": "style",
   "repo": "yuanchuan/style",
   "description": "Create stylesheets dynamically in javascript",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "keywords": ["css", "stylesheet"],
   "scripts": ["index.js"]
