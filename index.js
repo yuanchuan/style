@@ -57,6 +57,14 @@ Style.prototype = {
     return this;
   },
 
+  /**
+   * Unload the content from the style element but keep rules and map. 
+   */
+  unload: function() {
+    var elem = this.elem;
+    _setStyleContent(elem, '');
+    return this;
+  },
 
   /**
    * Clear the style and varialbes.
@@ -72,7 +80,7 @@ Style.prototype = {
   /**
    * Remove the style element completely.
    */
-  remove: function() {    
+  remove: function() {
     var elem = this.elem;
     if (elem && elem.parentNode) {
       this.clear();
@@ -115,7 +123,7 @@ function _createStyleElem() {
 
 
 // Substitute variables in the string with defined map. 
-function _substitute(str, map) {    
+function _substitute(str, map) {
   for (var name in map) {
     if (map.hasOwnProperty(name)) {
       str = str.replace(new RegExp('@' + name, 'gi'), map[name]);
