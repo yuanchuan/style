@@ -1,5 +1,5 @@
 # Style
-Create stylesheets dynamically in JavaScript. Ported from [excss](https://github.com/yuanchuan/excss).
+Create stylesheets dynamically in JavaScript. 
 
 ### Installation
 
@@ -72,11 +72,26 @@ Clear all the added styles:
 style.clear()
 ```
 
+Unload the content from the stye element but keep rules and map
+
+```Javascript
+style.unload()
+```
+
 Remove completely:
 
 ```Javascript
 style.remove()
 ```
+
+### API Reference
+`.define(Object variables)`  
+`.add(String style, ...)`      
+`.load([String style, ...])`  
+`.unload()`  
+`.clear()`  
+`.remove()`   
+ 
 
 ### License
 
