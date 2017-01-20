@@ -1,0 +1,21 @@
+{
+  "name": "@yuanchuan/style",
+  "version": "0.2.0",
+  "description": "Create stylesheets dynamically in javascript",
+  "main": "index.js",
+  "repository": {
+    "url": "git+ssh://git@github.com/yuanchuan/style.git",
+    "type": "git"
+  },
+  "author": "yuanchuan <yuanchuan23@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yuanchuan/style/issues"
+  },
+  "homepage": "https://github.com/yuanchuan/style#readme",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
